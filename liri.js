@@ -20,8 +20,10 @@ for (var i = 2; i < process.argv.length; i++){
 //switch statement for the first argument
 switch (argArray[0]){
 	case "my-tweets":
-		client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response) {
-		   console.log(tweets);
+		client.get('statuses/user_timeline', {screen_name: 'chr0nes'}, function(error, tweets, response) {
+		   	if (!error){
+		   	console.log(tweets);		   
+			}
 		});
 		break;
 	case "spotify-this-song":
