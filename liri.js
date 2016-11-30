@@ -94,7 +94,7 @@ function spotifySong(argArray){
 function movieSearch(argArray){
     if (argArray.length < 2){
         //omdb api request
-        request('http://www.omdbapi.com/?t=Mr.+Nobody&y=&plot=short&r=json', function (error, response, body) {
+        request('http://www.omdbapi.com/?t=Mr.+Nobody&y=&plot=short&tomatoes=true&r=json', function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 //convert to JSON
                 body = JSON.parse(body);
